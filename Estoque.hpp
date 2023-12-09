@@ -1,0 +1,73 @@
+#ifndef ESTOQUE_H
+#define ESTOQUE_H
+using namespace std;
+class Estoque{
+private:
+	vector<Inversores> inversoresEmEstoque;  
+    vector<Inversores> inversoresVendidos;
+    vector<Baterias> bateriasEmEstoque;  
+    vector<Baterias> bateriasVendidas;  
+    vector<Placas> placasEmEstoque;  
+    vector<Placas> placasVendidas;
+    vector<InterruptoresDR> interruptoresDREmEstoque;  
+    vector<InterruptoresDR> interruptoresDRVendidos;
+    vector<DisjuntoreDifResDDR> disjuntoreDifResDDREmEstoque;  
+    vector<DisjuntoreDifResDDR> disjuntoreDifResDDRVendidos;
+public:
+    bool adicionaBaterias(Baterias);
+    bool venderBaterias(string);
+    bool removerBateriasDoEstoque(string);
+    void exibiAsBateriasDisponiveis();  
+    void exibiNomesDasBaterias(string);  
+    void exibiBateriasVendidas();
+    bool adicionaPlacas_Solares(Placas);
+    bool venderPlacas_Solares(string);  
+    bool removerPlacas_SolaresDoEstoque(string);
+    void exibiPlacas_Solares(); 
+    void exibiNomesDasPlacas_Solares(string); 
+    void exibiPlacas_SolaresVendidas();
+    bool adicionaInversores(Inversores);
+    bool venderInversores(string);  
+    bool removerInversoresDoEstoque(string);
+    void exibiInversores(); 
+    void exibiNomesDasInversores(string); 
+    void exibiInversoresVendidos();
+    bool adicionaInterruptores(InterruptoresDR);
+    bool venderInterruptores(string);
+    bool removerInterruptoresDoEstoque(string);
+    void exibiAsInterruptoresDisponiveis();  
+    void exibiNomesDosInterruptores(string);  
+    void exibiInterruptoresVendidos();
+    bool adicionaDisjuntor(DisjuntoreDifResDDR);
+    bool venderDisjuntor(string);
+    bool removerDisjuntorDoEstoque(string);
+    void exibiDisjuntorDisponiveis();  
+    void exibiNomesDisjuntores(string);  
+    void exibiDisjuntorVendidos();
+    void salvarNoArquivoBaterias(string);
+    void salvarNoArquivoPlacas_Solares(string);
+    void salvarNoArquivoInversores(string);
+    void salvarNoArquivoDisjuntoreDifResDDR(string);
+    void salvarNoArquivoInterruptoresDR(string);
+    void salvarNoArquivoPlacas_SolaresVendidas(string);
+    void salvarNoArquivoBateriasVendidas(string);
+    void salvarNoArquivoInversoresVendidos(string);
+    void salvarNoArquivoDisjuntoreDifResDDRVendidos(string);
+    void salvarNoArquivoInterruptoresDRVendidos(string);
+    bool adicionaBateriasVendidas(Baterias);
+    bool adicionaPlacas_SolaresVendidas(Placas);
+    bool adicionaInversoresVendidos(Inversores);
+    bool adicionaDisjuntoreDifResDDRVendidos(DisjuntoreDifResDDR);
+    bool adicionaInterruptoresDRVendidos(InterruptoresDR);
+    void apagarVetorBaterias();
+    void apagarVetorBateriasVendidas();
+    void apagarVetorDisjuntores();
+    void apagarVetorDisjuntoresVendidos();
+    void apagarVetorInterruptor();
+	void apagarVetorInterruptorVendido();
+	void apagarVetorInversor();
+	void apagarVetorInversorVendido();
+	void apagarVetorPlacas();
+	void apagarVetorPlacasVendidas(); 
+};
+#endif 
